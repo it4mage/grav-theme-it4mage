@@ -9,11 +9,11 @@
     <link rel="shortcut icon" href="img/favicon.png"/>
 
     {% block stylesheets %}
-        {% do assets.addCss('theme://css/bootstrap.min.css', 100) %}
-        {% do assets.addCss('theme://css/font-awesome.min.css', 99) %}
-        {% do assets.addCss('theme://css/magnific-popup.css', 98) %}
+        {% do assets.addCss('theme://bower_components/bootstrap/dist/css/bootstrap.min.css', 100) %}
+        {% do assets.addCss('theme://bower_components/font-awesome/css/font-awesome.min.css', 99) %}
+        {% do assets.addCss('theme://bower_components/magnific-popup/dist/magnific-popup.css', 98) %}
         {% do assets.addCss('theme://css/component.css', 97) %}
-        {% do assets.addCss('theme://css/lightbox.css', 96) %}
+        {% do assets.addCss('theme://bower_components/lightbox/src/css/lightbox.css', 96) %}
         {% do assets.addCss('theme://css/style.css', 95) %}
         {% do assets.addCss('theme://css/icofont.css', 94) %}
         {% do assets.addCss('theme://css/styles.css', 93) %}
@@ -36,12 +36,16 @@
     {#</div>#}
 {#</div>#}
 
+{% include 'partials/header.html.twig' %}
+
 <div class="container">
     {% block content %}{% endblock content %}
 </div>
 
+{% include 'partials/footer.html.twig' %}
+
 {% block javascripts %}
-    {% do assets.addJs('theme://js/jquery-2.1.4.min.js', 100) %}
+    {% do assets.addJs('theme://bower_components/jquery/dist/jquery.min.js', 100) %}
     {% do assets.addJs('theme://js/jquery.magnific-popup.min.js', 99) %}
     {% do assets.addJs('theme://js/lightbox.js', 98) %}
     {% do assets.addJs('theme://js/equalHeightsPlugin.js', 97) %}
