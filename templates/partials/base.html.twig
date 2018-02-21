@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="shortcut icon" href="img/favicon.png"/>
+
+    {% block stylesheets %}
+        {% do assets.addCss('theme://css/bootstrap.min.css', 100) %}
+        {% do assets.addCss('theme://css/font-awesome.min.css', 99) %}
+        {% do assets.addCss('theme://css/magnific-popup.css', 98) %}
+        {% do assets.addCss('theme://css/component.css', 97) %}
+        {% do assets.addCss('theme://css/lightbox.css', 96) %}
+        {% do assets.addCss('theme://css/style.css', 95) %}
+        {% do assets.addCss('theme://css/icofont.css', 94) %}
+        {% do assets.addCss('theme://css/styles.css', 93) %}
+
+    {% endblock %}
+    {{ assets.css() }}
+
+    <title>IT4Mage.org</title>
+</head>
+<body>
+
+{#<div class="preload-wrap">#}
+    {#<div class="a-preload">#}
+        {#<div class="cssload-thecube">#}
+            {#<div class="cssload-cube cssload-c1"></div>#}
+            {#<div class="cssload-cube cssload-c2"></div>#}
+            {#<div class="cssload-cube cssload-c4"></div>#}
+            {#<div class="cssload-cube cssload-c3"></div>#}
+        {#</div>#}
+    {#</div>#}
+{#</div>#}
+
+<div class="container">
+    {% block content %}{% endblock content %}
+</div>
+
+{% block javascripts %}
+    {% do assets.addJs('theme://js/jquery-2.1.4.min.js', 100) %}
+    {% do assets.addJs('theme://js/jquery.magnific-popup.min.js', 99) %}
+    {% do assets.addJs('theme://js/lightbox.js', 98) %}
+    {% do assets.addJs('theme://js/equalHeightsPlugin.js', 97) %}
+    {% do assets.addJs('theme://js/modernizr.custom.js', 96) %}
+    {% do assets.addJs('theme://js/jquery.dlmenu.js', 95) %}
+    {% do assets.addJs('theme://js/anchors.navigation.js', 94) %}
+    {% do assets.addJs('theme://js/all.js', 93) %}
+{% endblock %}
+{{ assets.js() }}
+
+</body>
+</html>

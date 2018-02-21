@@ -1,0 +1,27 @@
+{
+  "name": "it4mage",
+  "description": "Together we do it better",
+  "homepage": "https://www.it4mage.org",
+  "authors": [
+    {
+      "name": "IT4Mage Team",
+      "email": "it4mage@googlegroups.com"
+    }
+  ],
+  "main": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.5",
+    "font-awesome": "4.6.3",
+    "jquery": "2.1.4",
+    "magnific-popup": "1.0.1",
+    "lightbox": "2.8.2"
+  }
+}
