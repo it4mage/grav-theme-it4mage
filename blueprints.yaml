@@ -1,6 +1,6 @@
 name: it4mage-theme
-version: 0.0.1
+version: 0.0.2
 description: Grav Theme for IT4Mage
-bugs:
-readme:
+bugs: https://github.com/it4mage/grav-theme-it4mage/issues
+readme: https://github.com/it4mage/grav-theme-it4mage/blob/master/README.md
 license: MIT
