@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no" />
 
-    <link rel="shortcut icon" href="img/favicon.png"/>
+    <link rel="shortcut icon" href="{{ url('theme://img/favicon.png') }}"/>
 
     {% block stylesheets %}
         {% do assets.addCss('theme://bower_components/bootstrap/dist/css/bootstrap.min.css', 100) %}
@@ -21,7 +21,8 @@
     {% endblock %}
     {{ assets.css() }}
 
-    <title>IT4Mage.org</title>
+    <title>{% if header.title %}{{ header.title }}{% else %}{{ site.title }}{% endif %}</title>
+
 </head>
 <body>
 
@@ -38,9 +39,7 @@
 
 {% include 'partials/header.html.twig' %}
 
-<div class="container">
-    {% block content %}{% endblock content %}
-</div>
+{% block content %}{% endblock content %}
 
 {% include 'partials/footer.html.twig' %}
 

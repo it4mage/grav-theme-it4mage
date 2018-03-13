@@ -3094,6 +3094,7 @@ a.a-btn.type-4 {
 
 .post-block.single-blog {
   max-width: 100%;
+  padding: 20px 0;
 }
 
 .post-block.single-blog .descr {
