@@ -1,0 +1,37 @@
+<div class="container">
+
+    <!--HEADLINE-->
+    <div class="row" id="speakers">
+        <div class="col-xs-12 marg-lg-t95 marg-xs-t40 marg-lg-b70 marg-xs-b40">
+            <div class="a-head t-center">
+                <h5 class="head-subtitle font-4">{{ page.header.subtitle }}</h5>
+                <h3 class="head-title font-2">{{ page.header.title }}</h3>
+            </div>
+        </div>
+    </div>
+    <!--/HEADLINE-->
+
+    <!--SPEAKERS-->
+    <div class="row marg-lg-b45 marg-xs-b0">
+        {% for item in page.header.row_one %}
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="speaker-wrapper s-back-switch">
+                    <img src="{{ item.img }}" alt="speaker" class="s-img-switch">
+                    <div class="speaker-descr">
+                        <div class="speaker-descr-middle">
+                            <h4 class="title">{{ item.name }}</h4>
+                            <h5 class="sub-title">{{ item.job }}</h5>
+                            <div class="hover">
+                                <div class="social">
+                                    <a href="{{ item.github }}" target="_blank" class="fa fa-github"></a>
+                                    <a href="{{ item.twitter }}" target="_blank" class="fa fa-twitter"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <!--/SPEAKERS-->
+</div>

@@ -2323,13 +2323,13 @@ a.a-btn.type-4 {
 
 .speaker-wrapper .speaker-descr {
   position: absolute;
-  bottom: 8px;
+  bottom: 3px;
   right: 8px;
   left: 8px;
   background-color: white;
-  padding: 25px 0;
+  padding: 10px 0;
   text-align: center;
-  height: 90px;
+  height: 60px;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
@@ -2812,6 +2812,22 @@ a.a-btn.type-4 {
 
 .post-block .descr .sub-title {
   letter-spacing: .3px;
+}
+
+.post-block ul {
+  list-style: initial;
+  padding: 5px 20px;
+}
+
+.post-block strong {
+  font-weight: bold;
+}
+
+.post-block a {
+  color: #F0650D;
+}
+.post-block a:hover {
+  text-decoration: underline;
 }
 
 .sponsors-item {
