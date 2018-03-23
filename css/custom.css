@@ -1,0 +1,68 @@
+body .a-header {
+  background: #000;
+  padding-top: 0;
+  height: 60px;
+  padding-bottom: 70px;
+}
+.inner-wrap .logo {
+  height: 80px;
+}
+.inner-wrap .logo:hover {
+  height: 82px;
+}
+.inner-wrap .logo img {
+  height: 50px;
+}
+.inner-wrap .logo:hover img {
+  height: 52px;
+}
+.a-banner.blog .banner-heading .heading-subtitle {
+  display: none;
+}
+.a-banner.blog {
+  padding:100px 30px 40px 30px;
+}
+body .container.main-container,
+.main-content {
+  background: #fff;
+  box-shadow:  0 13px 24px 0 rgba(0, 0, 0, 0.08);
+}
+body .container.main-container .post-block {
+  background: none;
+  box-shadow: none;
+}
+
+.main-content {
+  padding:0 40px;
+}
+
+.page-content .post-block {
+  /*  min-height: 600px; */
+  color: #888;
+}
+.post-block.single-blog .entry-content {
+  color: #888;
+}
+.speaker-wrapper .speaker-descr .social a:before {
+  font-size: 24px;
+}
+
+.footer-bottom {
+  height: 38px;
+  background: #000;
+  color: #fff;
+}
+.footer-bottom .copyright {
+  background: none;
+  padding: 10px 0;
+}
+.speaker-wrapper .speaker-descr .sub-title {
+  color: #888;
+}
+.a-footer .social-wrap .social-item a {
+  font-size: 14px;
+}
+.a-footer .social-wrap .social-item a .fa {
+  font-size: 16px;
+}
+No newline at end of file
