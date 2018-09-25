@@ -1,0 +1,21 @@
+{% set blog_image = page.media.images|first %}
+
+<div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="post-block blog t-center">
+        <div class="img-wrap s-back-switch">
+            {% if blog_image %}
+                <a href="{{ page.url }}"><img src="{{ blog_image.url }}" class="s-img-switch" alt="#"></a>
+            {% endif %}
+            <div class="date"><span class="day">{{ page.date|date("d") }}</span>{{ page.date|date("M") }} {{ page.date|date("Y") }}</div>
+        </div>
+        <div class="descr">
+            <p class="subtitle">{{ page.subtitle }}</p>
+            <div class="title">{{ page.title }}</div>
+
+            {% if page.header.short_post %}
+                <p class="text">{{ page.header.short_post.content }}</p>
+            {% endif %}
+            <a href="{{ page.url }}" class="a-btn">Vai all'articolo</a>
+        </div>
+    </div>
+</div>

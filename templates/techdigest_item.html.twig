@@ -1,0 +1,63 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set blog_image = page.media.images|first %}
+
+{% block content %}
+
+    <!--/HEADER-->
+    <div class="container-fluid no-padd">
+
+        <!--BANNER-->
+        <div class="row">
+            <div class="col-md-12 no-padding">
+                <div class="a-banner blog overlay type-o s-back-switch">
+                    <section class="banner-heading t-center">
+                        <h1 class="heading-title font-2">Raccolta Articoli</h1>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!--/BANNER-->
+    </div>
+
+    <!--POST-->
+    <div class="container-fluid no-padd bg-c-2">
+        <div class="row marg-lg-t100 marg-xs-t40 marg-lg-b100 marg-xs-b40">
+            <div class="col-xs-12">
+                <div class="container">
+
+                    <div class="row marg-lg-b20 marg-xs-b0 marg-xs-b10">
+                        <div class="col-xs-12">
+
+                            <article class="post-block single-blog">
+
+                                <a class="img-wrap img-popup" data-effect="mfp-zoom-in">
+                                    {% if blog_image %}
+                                        <img src="{{ blog_image.url }}" class="img-wrap img-popup" alt="#">
+                                    {% endif %}
+                                    <div class="date"><span class="day">{{ page.date|date("d") }}</span>{{ page.date|date("M") }} {{ page.date|date("Y") }}</div>
+                                </a>
+
+                                <header class="descr">
+                                    <h2 class="title"><span>{{ page.title }}</span></h2>
+                                </header>
+                                <!--.entry-header -->
+
+                                <div class="entry-content techdigest">
+                                    {% for module in page.collection() %}
+                                        {{ module.content }}
+                                    {% endfor %}
+                                </div>
+                                <!-- .entry-content -->
+
+                            </article>
+                        </div>
+                    </div>
+                    <!--/POST-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

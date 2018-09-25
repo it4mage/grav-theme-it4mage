@@ -2823,7 +2823,7 @@ a.a-btn.type-4 {
   font-weight: bold;
 }
 
-.post-block a {
+.post-block.single-blog a {
   color: #F0650D;
 }
 .post-block a:hover {

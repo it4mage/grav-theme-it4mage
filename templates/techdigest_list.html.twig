@@ -1,0 +1,57 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set collection = page.collection() %}
+
+{% block content %}
+
+    <!--/HEADER-->
+    <div class="container-fluid">
+
+        <!--BANNER-->
+        <div class="row">
+            <div class="col-md-12 no-padding">
+                <div class="a-banner blog overlay type-o s-back-switch">
+                    <section class="banner-heading t-center">
+                        <h1 class="heading-title font-2">{{ page.title }}</h1>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!--/BANNER-->
+    </div>
+
+        <!--POSTS-->
+        <div class="container-fluid no-padd bg-c-2">
+            <div class="row marg-lg-t100 marg-xs-t50">
+                <div class="col-xs-12">
+                    <div class="container">
+
+                        <div class="row marg-lg-b20 marg-xs-b0 marg-xs-b10">
+                            {% for child in collection %}
+                                    {% include 'partials/techdigest_short.html.twig' with {'page':child} %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/POSTS-->
+
+
+            <!--PAGINATION-->
+
+            {#<div class="row marg-lg-t40 marg-xs-t0 marg-xs-b40 marg-lg-b100">#}
+                {#<div class="col-xs-12">#}
+                    {#<ul class="clearfix pagination">#}
+                        {#<li class="page"><a href="#"><i class="icofont icofont-rounded-left"></i></a></li>#}
+                        {#<li class="page active"><a href="#">1</a></li>#}
+                        {#<li class="page"><a href="#">2</a></li>#}
+                        {#<li class="page"><a href="#">3</a></li>#}
+                        {#<li class="page"><a href="#">4</a></li>#}
+                        {#<li class="page"><a href="#"><i class="icofont icofont-rounded-right"></i></a></li>#}
+                    {#</ul>#}
+                {#</div>#}
+            {#</div>#}
+
+            <!--/PAGINATION-->
+        </div>
+{% endblock content %}
