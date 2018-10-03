@@ -46,6 +46,10 @@ body .container.main-container .post-block {
 .speaker-wrapper .speaker-descr .social a:before {
   font-size: 24px;
 }
+.a-footer .social-wrap .social-item {
+  display: block;
+  line-height: 30px;
+}
 
 .footer-bottom {
   height: 38px;
