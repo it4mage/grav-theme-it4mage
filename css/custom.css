@@ -65,4 +65,19 @@ body .container.main-container .post-block {
 .a-footer .social-wrap .social-item a .fa {
   font-size: 16px;
 }
-No newline at end of file
+
+/* Techdigest */
+ul.techdigest__list {
+  list-style: none;
+}
+ul.techdigest__list .techdigest__category {
+  font-weight: 900;
+  color: #000000;
+}
+ul.techdigest__list .techdigest__author {
+  color: #4b4b4b;
+  font-size: 13px
+}
+ul.techdigest__list .techdigest__tags {
+  font-size: 11px
+}

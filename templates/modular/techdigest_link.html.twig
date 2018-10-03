@@ -1,10 +1,10 @@
-<ul class="techdigest-list">
+<ul class="techdigest__list">
 {% for item in page.header.article.comefareper|ksort %}
     <li>
-        <stong>{{ item.category }}</stong>
+        <div class="techdigest__category">{{ item.category }}</div>
         <a href="{{ item.link }}" target="_blank"><h3>{{ item.title }}</h3></a>
-        <p>di {{ item.author }} ({{ item.source }})</p>
-        <div>
+        <p class="techdigest__author">di {{ item.author }} ({{ item.source }})</p>
+        <div class="techdigest__tags">
             {% for tag in item.tags %}
                 #{{ tag }}
             {% endfor %}
@@ -13,10 +13,10 @@
 {% endfor %}
 {% for item in page.header.article.eventi|ksort %}
     <li>
-        <stong>{{ item.category }}</stong>
+        <div class="techdigest__category">{{ item.category }}</div>
         <a href="{{ item.link }}" target="_blank"><h3>{{ item.title }}</h3></a>
-        <p>di {{ item.author }} ({{ item.source }})</p>
-        <div>
+        <p class="techdigest__author">di {{ item.author }} ({{ item.source }})</p>
+        <div class="techdigest__tags">
             {% for tag in item.tags %}
                 #{{ tag }}
             {% endfor %}
@@ -25,10 +25,10 @@
 {% endfor %}
 {% for item in page.header.article.informazioni|ksort %}
     <li>
-        <stong>{{ item.category }}</stong>
+        <div class="techdigest__category">{{ item.category }}</div>
         <a href="{{ item.link }}" target="_blank"><h3>{{ item.title }}</h3></a>
-        <p>di {{ item.author }} ({{ item.source }})</p>
-        <div>
+        <p class="techdigest__author">di {{ item.author }} ({{ item.source }})</p>
+        <div class="techdigest__tags">
             {% for tag in item.tags %}
                 #{{ tag }}
             {% endfor %}
@@ -36,3 +36,7 @@
     </li>
 {% endfor %}
 </ul>
+
+<hr />
+
+<strong>Vuoi aggiungere un articolo? Crea una pull request modificando i file sotto: <a href="https://github.com/it4mage/it4mage.org/blob/master/htdocs/user/pages/05.raccolta-articoli-magento/_topublish" >htdocs/user/pages/05.raccolta-articoli-magento/_topublish</a></strong>
